@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/hotwire-forums.iml" filepath="$PROJECT_DIR$/.idea/hotwire-forums.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../rendercom-api/.idea/rendercom-api.iml" filepath="$PROJECT_DIR$/../rendercom-api/.idea/rendercom-api.iml" />
     </modules>
   </component>
 </project>
