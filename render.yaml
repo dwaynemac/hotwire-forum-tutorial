@@ -2,6 +2,7 @@ databases:
   - name: hotwire_forums
     databaseName: hotwire_forums_production
     user: hotwire_forums
+    plan: free
 
 services:
   - type: web
@@ -9,6 +10,7 @@ services:
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
+    plan: free
     envVars:
       - key: DATABASE_URL
         fromDatabase:
@@ -16,3 +18,12 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
+  - type: redis
+    name: hotwire_forums
+    version: 6.0
+    plan: free
+    envVars:
+      - key: REDIS_URL
+        fromService:
+          name: hotwire_forums
+          property: connectionString
