@@ -17,13 +17,15 @@ services:
         fromDatabase:
           name: hotwire_forums_db
           property: connectionString
-      - key: RAILS_MASTER_KEY
-        sync: false
       - key: REDIS_URL
         fromService:
           type: redis
           name: hotwire_forums_redis
           property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: APPSIGNAL_PUSH_API_KEY
+        sync: false
   - type: redis
     name: hotwire_forums_redis
     plan: free
