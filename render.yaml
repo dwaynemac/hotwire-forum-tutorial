@@ -18,12 +18,10 @@ services:
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
-  - type: redis
-    name: hotwire_forums
-    version: 6.0
-    plan: free
-    envVars:
       - key: REDIS_URL
         fromService:
           name: hotwire_forums
           property: connectionString
+  - type: redis
+    name: hotwire_forums
+    plan: free
