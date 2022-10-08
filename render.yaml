@@ -3,6 +3,7 @@ databases:
     databaseName: hotwire_forums_production
     user: hotwire_forums
     plan: free
+    ipAllowList: []
 
 services:
   - type: web
@@ -25,3 +26,4 @@ services:
   - type: redis
     name: hotwire_forums_redis
     plan: free
+    ipAllowList: []
