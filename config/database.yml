@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: hotwire_forums_production
   username: hotwire_forums
   password: <%= ENV["HOTWIRE_FORUMS_DATABASE_PASSWORD"] %>
