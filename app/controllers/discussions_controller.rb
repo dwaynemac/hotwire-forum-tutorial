@@ -43,6 +43,11 @@ class DiscussionsController < ApplicationController
     end
   end
 
+  def destroy
+    @discussion.destroy!
+    redirect_to discussions_path, notice: "discussion deleted"
+  end
+
   private
 
   def set_discussion
