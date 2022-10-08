@@ -21,6 +21,7 @@ services:
         sync: false
       - key: REDIS_URL
         fromService:
+          type: redis
           name: hotwire_forums_redis
           property: connectionString
   - type: redis
