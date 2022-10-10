@@ -10,12 +10,16 @@ class DiscussionsController < ApplicationController
     @discussion = Discussion.new
   end
 
+  def show
+
+  end
+
   def create
     @discussion = Discussion.new(discussion_params)
     respond_to do |format|
       if @discussion.save
         format.html do
-          redirect_to discussions_path, notice: "discussion created"
+          redirect_to @discussion, notice: "discussion created"
         end
       else
         format.html do
@@ -33,7 +37,7 @@ class DiscussionsController < ApplicationController
     respond_to do |format|
       if @discussion.update(discussion_params)
         format.html do
-          redirect_to discussions_path, notice: "discussion updated"
+          redirect_to @discussion, notice: "discussion updated"
         end
       else
         format.html do

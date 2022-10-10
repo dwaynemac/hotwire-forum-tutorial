@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+turbo-frame {
+  display: block;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+}
